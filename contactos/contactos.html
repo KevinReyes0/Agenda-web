@@ -4,11 +4,11 @@
         <meta charset="UTF-8">
         <title>Contactos</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <link rel="stylesheet" href="./login.css">
+        <link rel="stylesheet" href="./contactos-style.css">
         
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg" style="background-color: #e8e8e8;">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid px-0">
                <a class="navbar-brand" href=""><img src="../assets/img/logo.png" alt="" style="width: 90px; height: 90px;"/></a>
                
@@ -21,9 +21,36 @@
                            </div>
                         </a>
                         
-
-
-                        
+                        <div class="dropdown-perfil img dropdown-menu dropdown-menu-end position-absolute mx-3 my-5">
+                          <div class="img dropdown-item">
+                             <div class="img d-flex">
+                                <div class="avatar avatar-md avatar-indicators avatar-online">
+                                   <img alt="avatar" src="../assets/img/usuario.webp" class="rounded-circle" style="width: 100px; height: 100px;"/>
+                                </div>
+                                <div class="letra-perfil ms-3 lh-1">
+                                   <h5 class="mb-1" id="name"></h5>
+                                   <p class="mb-0" id="correo"></p>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="dropdown-divider"></div>
+                          <ul class="list-unstyled">
+                            <li>
+                               <a class="letra-perfil dropdown-item" data-bs-toggle="modal" data-bs-target="#staticBackdrop"">
+                               <i class="fe fe-power me-2"></i>
+                               Perfil
+                               </a>
+                            </li>
+                         </ul>
+                          <ul class="list-unstyled">
+                             <li>
+                                <a class="letra-perfil dropdown-item" href="../login.html">
+                                <i class="fe fe-power me-2"></i>
+                                Cerrar sesión
+                                </a>
+                             </li>
+                          </ul>
+                       </div>    
                      </li>
                   </ul>
                </div>
@@ -42,32 +69,69 @@
                   <span class="icon-bar bottom-bar"></span>
                   </button>
                </div>
+
+               <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Perfil de Usuario</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <h5 class="mb-1" id="name1"></h5>
+                      <p class="mb-1" id="correo1"></p>
+                      <p class="mb-1">
+                        Contraseña: <span id="contra"></span>
+                      </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
                
                <div class="collapse navbar-collapse" id="navbar-default">
                   <ul class="navbar-nav">
                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <div class="icon-text">
+                          <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                            </svg>
+                          </div>
+                          <a class="liks-nav nav-link active" aria-current="page" href="#">Contactos</a>
+                        </div>
+                      </li>
+                     <li class="nav-item">
+                      <div class="icon-text">
+                        <div class="icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                            <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+                          </svg>
+                        </div>
+                        <a class="liks-nav nav-link" href="../favorito/favoritos.html">Favoritos</a>
+                      </div>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="#">Favoritos</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pendientes</a>
+                      <div class="icon-text">
+                        <div class="icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-card-checklist" viewBox="0 0 16 16">
+                            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
+                            <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0M7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0"/>
+                          </svg>
+                        </div>
+                        <a class="liks-nav nav-link" href="../todoList/todoList.html">Pendientes</a>
+                      </div>
                      </li>
                   </ul>
-                  <form class="mt-3 mt-lg-0 ms-lg-3 d-flex align-items-center">
-                     <span class="position-absolute ps-3 search-icon">
-                     <i class="fe fe-search"></i>
-                     </span>
-                     <input type="search" class="form-control ps-6" placeholder="Search Courses" />
-                  </form>
                </div>
             </div>
          </nav>
 
 
          <div class="py-5">
-            <div class="py-lg-14 bg-light pt-8 pb-8">       
+    
                <div class="container">
                  <div class="row">
                    <div class="col-md-12 col-12">
@@ -82,16 +146,18 @@
 
                         <div class="col-xl-3 col-lg-6 col-md-6 col-12">
                            <div class="card  border-top border-muted border-4  card-hover-with-icon">
-                             <div class="card-body">                              
-                               <div class="icon-shape icon-lg rounded-circle bg-light  mb-3  card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                             <div class="card-body" >                              
+                               <div class="icon-shape icon-lg bg- mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
                                    <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"></path>
-                                 </svg></div>
+                                 </svg>
+                                </div>
                                <div class="d-flex align-items-center justify-content-between">
                                  <div>
                                    <h4 class="mb-0">Juan Perez</h4>
                                    <p class="mb-0 ">+502 0919-2902</p>
                                  </div>
-                                 <a href="#" class="text-inherit">
+                                 <a href="#" class="text-inherit" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
                                      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
                                    </svg>
@@ -101,18 +167,84 @@
                            </div>
                         </div>
 
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Información de contacto</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <h4>Juan Perez</h4>
+                                <p>Teléfono: +502 0919-2902</p>
+                                <p>Genero: Hombre</p>
+                                <p>Direccion: Quiche</p>
+                                <p>Fecha de Cumpleaños: 10 de diciembre</p>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-12">
+                          <div class="card border-top border-muted border-4 card-hover-with-icon">
+                              <div class="card-body">
+                                  <div class="icon-shape icon-lg bg- mb-3">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                                          <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"></path>
+                                      </svg>
+                                  </div>
+                                  <div class="d-flex align-items-center justify-content-between">
+                                      <div>
+                                          <h4 class="mb-0">Peralta Martinez</h4>
+                                          <p class="mb-0">+502 9234-4532</p>
+                                      </div>
+                                      <a href="#" class="text-inherit" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+                                          </svg>
+                                      </a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Información de contacto</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <h4>Peralta Martinez</h4>
+                              <p>Teléfono: +502 9234-4532</p>
+                              <p>Genero: Hombre</p>
+                              <p>Direccion: Amatitlan</p>
+                              <p>Fecha de Cumpleaños: 18 de septiembre</p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
                        <div class="col-xl-3 col-lg-6 col-md-6 col-12">
                         <div class="card  border-top border-muted border-4  card-hover-with-icon">
                           <div class="card-body">
-                            <div class="icon-shape icon-lg rounded-circle bg-light  mb-3  card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                            <div class="icon-shape icon-lg bg- mb-3">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
                                 <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"></path>
                               </svg></div>
                             <div class="d-flex align-items-center justify-content-between">
                               <div>
-                                <h4 class="mb-0">Peralta Martinez</h4>
-                                <p class="mb-0 ">+502 9234-4532</p>
+                                <h4 class="mb-0">Pedro Pinto</h4>
+                                <p class="mb-0 ">+502 5363-5035</p>
                               </div>
-                              <a href="#" class="text-inherit">
+                              <a href="#" class="text-inherit" data-bs-toggle="modal" data-bs-target="#exampleModal2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
                                   <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
                                 </svg>
@@ -122,22 +254,22 @@
                         </div>
                       </div>
 
-                       <div class="col-xl-3 col-lg-6 col-md-6 col-12">
-                        <div class="card  border-top border-muted border-4  card-hover-with-icon">
-                          <div class="card-body">
-                            <div class="icon-shape icon-lg rounded-circle bg-light  mb-3  card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
-                                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"></path>
-                              </svg></div>
-                            <div class="d-flex align-items-center justify-content-between">
-                              <div>
-                                <h4 class="mb-0">Pedro Pinto</h4>
-                                <p class="mb-0 ">+502 5363-5035</p>
-                              </div>
-                              <a href="#" class="text-inherit">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
-                                </svg>
-                              </a>
+                      <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Información de contacto</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <h4>Pedro Pinto</h4>
+                              <p>Teléfono: +502 5363-5035</p>
+                              <p>Genero: Hombre</p>
+                              <p>Direccion: Zona 18</p>
+                              <p>Fecha de Cumpleaños: 1 de enero</p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                             </div>
                           </div>
                         </div>
@@ -146,7 +278,8 @@
                        <div class="col-xl-3 col-lg-6 col-md-6 col-12">
                          <div class="card  border-top border-muted border-4  card-hover-with-icon">
                            <div class="card-body">
-                             <div class="icon-shape icon-lg rounded-circle bg-light  mb-3  card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                            <div class="icon-shape icon-lg bg- mb-3">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
                                  <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"></path>
                                </svg></div>
                              <div class="d-flex align-items-center justify-content-between">
@@ -154,7 +287,7 @@
                                  <h4 class="mb-0">Jeremy Arevalo</h4>
                                  <p class="mb-0 ">+502 5390-5332</p>
                                </div>
-                               <a href="#" class="text-inherit">
+                               <a href="#" class="text-inherit" data-bs-toggle="modal" data-bs-target="#exampleModal3">
                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
                                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
                                  </svg>
@@ -164,10 +297,33 @@
                          </div>
                        </div>
 
+                       <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Información de contacto</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <h4>Jeremy Arevalo</h4>
+                              <p>Teléfono: +502 5390-5332</p>
+                              <p>Genero: Hombre</p>
+                              <p>Direccion: Selva Peten</p>
+                              <p>Fecha de Cumpleaños: 28 de febrero</p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
                        <div class="col-xl-3 col-lg-6 col-md-6 col-12">
                         <div class="card  border-top border-muted border-4  card-hover-with-icon">
                           <div class="card-body">
-                            <div class="icon-shape icon-lg rounded-circle bg-light  mb-3  card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                            <div class="icon-shape icon-lg bg- mb-3">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
                                 <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"></path>
                               </svg></div>
                             <div class="d-flex align-items-center justify-content-between">
@@ -175,7 +331,7 @@
                                 <h4 class="mb-0">Cristian Rosas</h4>
                                 <p class="mb-0 ">+502 0532-5621</p>
                               </div>
-                              <a href="#" class="text-inherit">
+                              <a href="#" class="text-inherit" data-bs-toggle="modal" data-bs-target="#exampleModal4">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
                                   <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
                                 </svg>
@@ -185,10 +341,32 @@
                         </div>
                       </div>
 
+                      <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Información de contacto</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <h4>Cristian Rosas</h4>
+                              <p>Teléfono: +502 0532-5621</p>
+                              <p>Genero: Hombre</p>
+                              <p>Direccion: Zona 7</p>
+                              <p>Fecha de Cumpleaños: 15 de octubre</p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
                       <div class="col-xl-3 col-lg-6 col-md-6 col-12">
                         <div class="card  border-top border-muted border-4  card-hover-with-icon">
                           <div class="card-body">
-                            <div class="icon-shape icon-lg rounded-circle bg-light  mb-3  card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                            <div class="icon-shape icon-lg bg- mb-3">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
                                 <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"></path>
                               </svg></div>
                             <div class="d-flex align-items-center justify-content-between">
@@ -196,7 +374,7 @@
                                 <h4 class="mb-0">Sergio Moscoso</h4>
                                 <p class="mb-0 ">+502 0091-5520</p>
                               </div>
-                              <a href="#" class="text-inherit">
+                              <a href="#" class="text-inherit" data-bs-toggle="modal" data-bs-target="#exampleModal5">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
                                   <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
                                 </svg>
@@ -206,10 +384,32 @@
                         </div>
                       </div>
 
+                      <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Información de contacto</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <h4>Sergio Moscoso</h4>
+                              <p>Teléfono: +502 0091-5520</p>
+                              <p>Genero: Hombre</p>
+                              <p>Direccion: Zona 10</p>
+                              <p>Fecha de Cumpleaños: 6 de mayo</p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
                       <div class="col-xl-3 col-lg-6 col-md-6 col-12">
                         <div class="card  border-top border-muted border-4  card-hover-with-icon">
                           <div class="card-body">
-                            <div class="icon-shape icon-lg rounded-circle bg-light  mb-3  card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                            <div class="icon-shape icon-lg bg- mb-3">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
                                 <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"></path>
                               </svg></div>
                             <div class="d-flex align-items-center justify-content-between">
@@ -217,11 +417,32 @@
                                 <h4 class="mb-0">Andy Contreras</h4>
                                 <p class="mb-0 ">+502 4579-4459</p>
                               </div>
-                              <a href="#" class="text-inherit">
+                              <a href="#" class="text-inherit" data-bs-toggle="modal" data-bs-target="#exampleModal6">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
                                   <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
                                 </svg>
                               </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Información de contacto</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <h4>Andy Contreras</h4>
+                              <p>Teléfono: +502 4579-4459</p>
+                              <p>Genero: Hombre</p>
+                              <p>Direccion: Zona 12</p>
+                              <p>Fecha de Cumpleaños: 09 de agosto</p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                             </div>
                           </div>
                         </div>
@@ -230,7 +451,8 @@
                       <div class="col-xl-3 col-lg-6 col-md-6 col-12">
                         <div class="card  border-top border-muted border-4  card-hover-with-icon">
                           <div class="card-body">
-                            <div class="icon-shape icon-lg rounded-circle bg-light  mb-3  card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                            <div class="icon-shape icon-lg bg- mb-3">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
                                 <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"></path>
                               </svg></div>
                             <div class="d-flex align-items-center justify-content-between">
@@ -238,7 +460,7 @@
                                 <h4 class="mb-0">Jaime Muralles</h4>
                                 <p class="mb-0 ">+502 0919-4521</p>
                               </div>
-                              <a href="#" class="text-inherit">
+                              <a href="#" class="text-inherit" data-bs-toggle="modal" data-bs-target="#exampleModal7">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
                                   <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
                                 </svg>
@@ -249,10 +471,31 @@
                         </div>
 
                       </div>
+
+                      <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Información de contacto</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <h4>Jaime Muralles</h4>
+                              <p>Teléfono: +502 0919-4521</p>
+                              <p>Genero: Hombre</p>
+                              <p>Direccion: Jaime Muralles</p>
+                              <p>Fecha de Cumpleaños: 28 de julio</p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                        
 
                        <div class="col-12 mt-8 text-center my-5">
-                         <a href="#" class="btn btn-outline-primary">Agregar un nuevo contacto</a>
+                         <a href="../nuevoContacto/nuevoContacto.html" class="btn btn-outline-primary">Agregar un nuevo contacto</a>
                        </div>
 
                      </div>
@@ -265,6 +508,39 @@
 
     
          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+         
+         <script>
+            
+          const name = localStorage.getItem("name");
+          const correo = localStorage.getItem("correo");
+          const contra = localStorage.getItem("contra");
+      
+      
+          document.getElementById("correo").innerHTML = `
+            ${correo}
+            
+          `;
 
+          document.getElementById("name").innerHTML = `
+            ${name}
+            
+          `;
+
+          document.getElementById("correo1").innerHTML = `
+            ${correo}
+            
+          `;
+
+          document.getElementById("name1").innerHTML = `
+            ${name}
+            
+          `;
+
+          document.getElementById("contra").innerHTML = `
+            ${contra}
+            
+          `;
+
+        </script>
       </body>
 </html>

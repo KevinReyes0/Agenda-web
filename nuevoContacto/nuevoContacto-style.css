@@ -1,0 +1,33 @@
+body {
+    background-color: #d6e3ff;
+}
+.avatar img {
+    width: 50px;
+    height: 50px; 
+}
+.navbar{
+    background-color: #3a5e98;
+}
+
+.liks-nav {
+    color: #d6e3ff;
+}
+
+.card{
+    background-color: #aac7ff; 
+    border-color: #aac7ff;
+}
+
+.dropdown-perfil{
+    background-color: #3a5e98;
+}
+
+.letra-perfil{
+    color: #d6e3ff;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}

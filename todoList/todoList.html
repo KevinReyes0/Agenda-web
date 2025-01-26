@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO - LIST</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link  rel="stylesheet" href="./todoList-style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid px-0">
+           <a class="navbar-brand" href=""><img src="../assets/img/logo.png" alt="" style="width: 90px; height: 90px;"/></a>
+           
+           <div class="ms-auto d-flex align-items-center order-lg-3">
+              <ul class="navbar-nav navbar-right-wrap mx-2 flex-row">
+                 <li class="dropdown ms-2 d-inline-block position-static">
+                    <a class="rounded-circle" href="#" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                       <div class="avatar avatar-md avatar-indicators avatar-online">
+                          <img alt="avatar" src="../assets/img/usuario.webp" class="rounded-circle" style="width: 50px; height: 50px;"/>
+                       </div>
+                    </a>
+                    
+                    <div class="dropdown-perfil img dropdown-menu dropdown-menu-end position-absolute mx-3 my-5">
+                      <div class="img dropdown-item">
+                         <div class="img d-flex">
+                            <div class="avatar avatar-md avatar-indicators avatar-online">
+                               <img alt="avatar" src="../assets/img/usuario.webp" class="rounded-circle" style="width: 100px; height: 100px;"/>
+                            </div>
+                            <div class="letra-perfil ms-3 lh-1">
+                               <h5 class="mb-1" id="name"></h5>
+                               <p class="mb-0" id="correo"></p>
+                            </div>
+                         </div>
+                      </div>
+                      <div class="dropdown-divider"></div>
+                      <ul class="list-unstyled">
+                        <li>
+                           <a class="letra-perfil dropdown-item" data-bs-toggle="modal" data-bs-target="#staticBackdrop"">
+                           <i class="fe fe-power me-2"></i>
+                           Perfil
+                           </a>
+                        </li>
+                     </ul>
+                      <ul class="list-unstyled">
+                         <li>
+                            <a class="letra-perfil dropdown-item" href="../login.html">
+                            <i class="fe fe-power me-2"></i>
+                            Cerrar sesión
+                            </a>
+                         </li>
+                      </ul>
+                   </div>    
+                 </li>
+              </ul>
+           </div>
+           <div>
+              
+              <button
+                 class="navbar-toggler collapsed"
+                 type="button"
+                 data-bs-toggle="collapse"
+                 data-bs-target="#navbar-default"
+                 aria-controls="navbar-default"
+                 aria-expanded="false"
+                 aria-label="Toggle navigation">
+              <span class="icon-bar top-bar mt-0"></span>
+              <span class="icon-bar middle-bar"></span>
+              <span class="icon-bar bottom-bar"></span>
+              </button>
+           </div>
+
+           <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Perfil de Usuario</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h5 class="mb-1" id="name1"></h5>
+                  <p class="mb-1" id="correo1"></p>
+                  <p class="mb-1">
+                    Contraseña: <span id="contra"></span>
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+           
+           <div class="collapse navbar-collapse" id="navbar-default">
+              <ul class="navbar-nav">
+                 <li class="nav-item">
+                    <div class="icon-text">
+                      <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                          <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                        </svg>
+                      </div>
+                      <a class="liks-nav nav-link" href="../contactos/contactos.html">Contactos</a>
+                    </div>
+                  </li>
+                 <li class="nav-item">
+                  <div class="icon-text">
+                    <div class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                        <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+                      </svg>
+                    </div>
+                    <a class="liks-nav nav-link" href="../favorito/favoritos.html">Favoritos</a>
+                  </div>
+                 </li>
+                 <li class="nav-item">
+                  <div class="icon-text">
+                    <div class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-card-checklist" viewBox="0 0 16 16">
+                        <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
+                        <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0M7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0"/>
+                      </svg>
+                    </div>
+                    <a class="liks-nav nav-link active" aria-current="page" href="../todoList/todoList.html">Pendientes</a>
+                  </div>
+                 </li>
+              </ul>
+           </div>
+        </div>
+     </nav>
+
+    
+     <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-sm-12">
+          <div class="my-5">
+            <h1 class="text-center mb-4">ToDo List</h1>           
+            <h4 class="mb-3">Agregar una Tarea</h4>        
+              <form id="Form">
+                <div class="mb-3">
+                  <label for="taskName" class="form-label">Nombre de la Tarea</label>
+                  <input type="text" id="taskName" class="form-control">
+                </div>
+                <div class="mb-3">
+                  <label for="taskPriority" class="form-label">Prioridad</label>
+                  <select id="taskPriority" class="form-select">
+                    <option value="1">Alta</option>
+                    <option value="2">Media</option>
+                    <option value="3">Baja</option>
+                  </select>
+                </div>
+                <div class="text-center my-5">
+                  <button type="submit" class="btn btn-primary">Agregar</button>
+                </div>
+              </form>
+          </div>
+    
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h4>Tareas Pendientes</h4>
+            <div>
+              <button id="botonAltaBaja" class="btn btn-sm btn-outline-danger me-2">Prioridad: Alta → Baja</button>
+              <button id="botonBajaAlta" class="btn btn-sm btn-outline-success">Prioridad: Baja → Alta</button>
+            </div>
+          </div>
+
+            <div class="my-4">
+                <h5 class="">Lista de Tareas</h5>
+            </div>
+            <div class="container mb-5">
+              <ul id="List" class="list-group"></ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+    
+    <script  src="./TodoList.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
